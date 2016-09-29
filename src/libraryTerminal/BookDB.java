@@ -13,8 +13,8 @@ public class BookDB {
 	    public static ArrayList<Book> getallBooks() {
 	    	
 	        allBooks.add(new Book("Divergent", "Veronica Roth", "Adventure"));
-	        allBooks.add(new Book("The Infinity Sea"," Rick Yancey"," Adventure"));
-	        allBooks.add(new Book("Into the Wild", "Jon Krakauer"," Adventure"));
+	        allBooks.add(new Book("The Infinity Sea", "Rick Yancey", "Adventure"));
+	        allBooks.add(new Book("Into the Wild", "Jon Krakauer", "Adventure"));
 	        allBooks.add(new Book("Island of the Blue Dolphins", "Scott ODell", "Adventure"));
 	        allBooks.add(new Book("Four Years Later", "Monica Murphy", "Romance"));
 	        allBooks.add(new Book("Claimed", "Stacey Kennedy", "Romance"));
