@@ -8,12 +8,17 @@ import java.util.Scanner;
 
 
 public class BookListApp {
-	
- Scanner sc = new Scanner(System.in);
+	//Declarations
+ static Scanner sc = new Scanner(System.in);
+ 
+ 
 
 	    public static void main(String[] args) {
 
 	        System.out.println("Welcome to the Grand Circus Book Club\n");
+	        System.out.println("Press (1) if you are checking out or press (2) if you are returning?)");
+	       int a = sc.nextInt();
+	        //while()
 
 	        ArrayList<Book> allBooks= BookDB.getallBooks();
 
