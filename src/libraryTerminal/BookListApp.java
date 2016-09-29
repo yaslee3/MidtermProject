@@ -2,7 +2,8 @@ package libraryTerminal;
 	
 
 import java.util.ArrayList;
-	import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Scanner;
 
 
 
@@ -18,7 +19,10 @@ public class BookListApp {
 
 	        System.out.println("There are " + allBooks.size()  + 
 	                " Books in the library list.\n");
-
+	        for (Book m : allBooks) {
+                System.out.println(m.toString());
+            }
+	        System.out.println();
 	        String choice = "y";
 	        while (choice.equalsIgnoreCase("y")) {
 	            String category = Console.getRequiredString(

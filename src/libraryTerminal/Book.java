@@ -35,4 +35,8 @@ public class Book {
 	    public void setCategory(String category) {
 	        newCategory = category;
 	    }
+	    public String toString(){
+	    	return newTitle + " " + newAuthor + " " + newCategory;
+	    }
+	    
 	}
