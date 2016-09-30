@@ -14,10 +14,15 @@ public class BookListApp {
  
 
 	    public static void main(String[] args) {
-
+	    	int min=0;
+			int max=3;
 	        System.out.println("Welcome to the Grand Circus Book Club\n");
-	        System.out.println("Press (1) if you are checking out or press (2) if you are returning?)");
-	       int a = sc.nextInt();
+	       // System.out.println("Press (1) if you are checking out or press (2) if you are returning?)");
+	        //throw exception if enter a number less than '1'or more than '2'
+	        int a = Console.getInt("Press (1) if you are checking out or press (2) if you are returning?" , min, max); //get input from user
+			
+	       // int a = sc.nextInt();
+	       
 	        //while()
 
 	        ArrayList<Book> allBooks= BookDB.getallBooks();
