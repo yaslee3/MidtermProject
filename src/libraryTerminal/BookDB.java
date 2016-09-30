@@ -51,4 +51,18 @@ public static ArrayList<Book> getTitle(String title) {
 		return book;	
 
 }
+
+public static ArrayList<Book> getAuthor(String author) {
+	
+	ArrayList<Book> book = new ArrayList<>();
+	for (Book m : allBooks) {
+		if (m.getAuthor().equalsIgnoreCase(author)) {
+			book.add(m);
+		}	
+									
+			}//end if	
+	return book;	
+
+}
+
 }
