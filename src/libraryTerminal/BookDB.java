@@ -1,10 +1,11 @@
 package libraryTerminal;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class BookDB {
 
-	public static ArrayList<Book> allBooks = new ArrayList<>(100);
+	public static ArrayList<Book> allBooks = new ArrayList<>(30);
 
 	public static ArrayList<Book> getallBooks() {
 
@@ -25,13 +26,29 @@ public class BookDB {
 		return allBooks;
 	}
 
+	
+	
 	public static ArrayList<Book> getBook(String category) {
+		
 		ArrayList<Book> book = new ArrayList<>();
 		for (Book m : allBooks) {
 			if (m.getCategory().equalsIgnoreCase(category)) {
 				book.add(m);
-			}
-		}
+			}	
+										
+				}//end if	
 		return book;
 	}
+public static ArrayList<Book> getTitle(String title) {
+		
+		ArrayList<Book> book = new ArrayList<>();
+		for (Book m : allBooks) {
+			if (m.getTitle().equalsIgnoreCase(title)) {
+				book.add(m);
+			}	
+										
+				}//end if	
+		return book;	
+
+}
 }
