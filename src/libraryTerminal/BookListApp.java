@@ -102,10 +102,10 @@ public class BookListApp {
 			
 			// Establish a due date for checked-out books
 			Date currentDate = new Date ();
-			System.out.println("CURRENT DATE:" + currentDate);
+			System.out.println("Today's date:  " + currentDate);
 			GregorianCalendar calendar = new GregorianCalendar();
 			calendar.add(Calendar.DATE, 14);
-			System.out.println("DUE DATE:" +(calendar.getTime()));
+			System.out.println("This book is due back on:  " +(calendar.getTime()));
 				
 		}
 		
