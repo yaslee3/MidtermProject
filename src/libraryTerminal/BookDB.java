@@ -1,7 +1,6 @@
 package libraryTerminal;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class BookDB {
 
@@ -26,29 +25,7 @@ public class BookDB {
 		return allBooks;
 	}
 
-//	public static ArrayList<Book> allAuthors = new ArrayList<>(15);
-//
-//	public static ArrayList<Book> getallAuthors() {
-//
-//		allAuthors.add(new Book("1. ", "Veronica Roth"));
-//		allAuthors.add(new Book("2. ", "Rick Yancey"));
-//		allAuthors.add(new Book("3. ", "Jon Krakauer"));
-//		allAuthors.add(new Book("4. ",  "Scott ODell"));
-//		allAuthors.add(new Book("5. ", "Monica Murphy"));
-//		allAuthors.add(new Book("6. ", "Stacey Kennedy"));
-//		allAuthors.add(new Book("7. ", "A.R Bernard"));
-//		allAuthors.add(new Book("8. ", "Pamela Labud"));
-//		allAuthors.add(new Book("9. ", "Madeleine Roux"));
-//		allAuthors.add(new Book("10. ", "Mira Grant"));
-//		allAuthors.add(new Book("11. ", "Stephen King"));
-//		allAuthors.add(new Book("12. ", "Joseph Delaney"));
-//	
-//
-//		return allAuthors;
-//	}
-//	
 	
-		
 	public static ArrayList<Book> getBook(String category) {
 		
 		ArrayList<Book> book = new ArrayList<>();

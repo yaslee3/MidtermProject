@@ -39,9 +39,8 @@ public class Console {
 		}
 		return s;
 	}
-	
-	
-// continue statement input validation block
+		
+// continue statement input validation block 1
 	public static String getChoice(String prompt, String s1, String s2) {
 		String s = "";
 		while (true) {
@@ -55,14 +54,16 @@ public class Console {
 		return s;
 	}
 	
-// continue statement input validation block
+// continue statement input validation block 2
 	public static String getChoice(String prompt, String s1, String s2, String s3) {
 		String s = "";
 		boolean isValid = false;
 		while (isValid == false) {
 			s = getRequiredString(prompt);
 			if (!s.equalsIgnoreCase(s1) && !s.equalsIgnoreCase(s2) && !s.equalsIgnoreCase(s3)) {
-				System.out.println("Error! Entry must be '" + s1 + "', '" + s2 + "', or '" + s3 + "'. Try again.");
+				System.out.println();
+				System.out.println("The categories are '" + s1 + "', '" + s2 + "', or '" + s3 + "'. Please try again.");
+				System.out.println();
 			} else {
 				isValid = true;
 			}
@@ -70,8 +71,6 @@ public class Console {
 		return s;
 	}
 	
-	
-
 	public static int getInt(String prompt) {
 		int i = 0;
 		while (true) {

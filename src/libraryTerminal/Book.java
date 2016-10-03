@@ -16,7 +16,7 @@ public class Book {
 	}
 
 	public Book(String string, String string2) {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public String getnewbooknum() {
@@ -52,10 +52,8 @@ public class Book {
 	}
 
 	public String toString() {
-		return newTitle + " " + newAuthor + " " + newCategory;
+		return newBooknum +"Title:  " + newTitle + "  Author:  " + newAuthor + ",  Genre:  " + newCategory + " category.";
 	}
-	public String toString1() {
-		return newAuthor;
-	}
+	
 
 }
