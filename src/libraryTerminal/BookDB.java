@@ -21,13 +21,34 @@ public class BookDB {
 		allBooks.add(new Book("10. ", "Feed", "Mira Grant", "Horror"));
 		allBooks.add(new Book("11. ", "The Long Walk Home", "Stephen King", "Horror"));
 		allBooks.add(new Book("12. ", "A New Darkness", "Joseph Delaney", "Horror"));
-		// allBooks.add(new Book("The Troop", "Nick Cutter"));
+		
 
 		return allBooks;
 	}
 
+//	public static ArrayList<Book> allAuthors = new ArrayList<>(15);
+//
+//	public static ArrayList<Book> getallAuthors() {
+//
+//		allAuthors.add(new Book("1. ", "Veronica Roth"));
+//		allAuthors.add(new Book("2. ", "Rick Yancey"));
+//		allAuthors.add(new Book("3. ", "Jon Krakauer"));
+//		allAuthors.add(new Book("4. ",  "Scott ODell"));
+//		allAuthors.add(new Book("5. ", "Monica Murphy"));
+//		allAuthors.add(new Book("6. ", "Stacey Kennedy"));
+//		allAuthors.add(new Book("7. ", "A.R Bernard"));
+//		allAuthors.add(new Book("8. ", "Pamela Labud"));
+//		allAuthors.add(new Book("9. ", "Madeleine Roux"));
+//		allAuthors.add(new Book("10. ", "Mira Grant"));
+//		allAuthors.add(new Book("11. ", "Stephen King"));
+//		allAuthors.add(new Book("12. ", "Joseph Delaney"));
+//	
+//
+//		return allAuthors;
+//	}
+//	
 	
-	
+		
 	public static ArrayList<Book> getBook(String category) {
 		
 		ArrayList<Book> book = new ArrayList<>();
@@ -39,6 +60,8 @@ public class BookDB {
 				}//end if	
 		return book;
 	}
+	
+	// pulls Title by name	
 public static ArrayList<Book> getTitle(String title) {
 		
 		ArrayList<Book> book = new ArrayList<>();
@@ -51,7 +74,7 @@ public static ArrayList<Book> getTitle(String title) {
 		return book;	
 
 }
-
+// pulls Author by name
 public static ArrayList<Book> getAuthor(String author) {
 	
 	ArrayList<Book> book = new ArrayList<>();

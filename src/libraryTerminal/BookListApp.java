@@ -1,7 +1,10 @@
 package libraryTerminal;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+//import java.util.Arrays;
 import java.util.Scanner;
 
 public class BookListApp {
@@ -9,8 +12,9 @@ public class BookListApp {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		
 		int min = 0;
-		int max = 3;
+		int max = 4;
 		System.out.println("Welcome to the Grand Circus Book Club\n");
 		
 		// throw exception if enter a number less than '1'or more than '2'
@@ -22,33 +26,34 @@ public class BookListApp {
 		ArrayList<Book> shoppingCart = new ArrayList<Book>();
 
 		
-		
-		
-		
-
 		String choice = "y";
 		while (choice.equalsIgnoreCase("y")) {
 			
-			//Re-number the books when removed from arraylist
-			for(int q=0;q<allBooks.size();q++){
+			//Re-number the books when removed from Arraylist
+			for(int q=0; q<allBooks.size(); q++){
 				
 				allBooks.get(q).setnewBooknum((q+1)+". "); 
+				
 			}
-
-			System.out.println("There are " + allBooks.size() + " Books in the library list.\n");
+			
+			// Display full Booklist
+			
+			System.out.println("There are " + allBooks.size() + " books currently on the library list.\n");
 			for (Book m : allBooks) {
 				System.out.println(m.toString());
 			}
+			
+			// blank line
 			System.out.println();
 			
-			int search =Console.getInt("Press (1) if you are search by category or press (2) by author, or Press (3) for title?", min, max);
+			// Nothing under 1 or over 3 allowed by getInt method
+			int search =Console.getInt("Press (1) if you are searching by category, (2) if by author, or (3) if by title, please", min, max);
 			
 			if(search==1){
 			
 			String category = Console.getRequiredString("What category are you interested in? (Adventure, Romance or Horror?)");
 			
 			System.out.println();
-			
 			
 			// to access Movie DB class to get categories
 			ArrayList<Book> bookCat = BookDB.getBook(category);
@@ -58,16 +63,23 @@ public class BookListApp {
 				
 			}
 			System.out.println();
-			}else if(search==2){
-				System.out.println("Enter an author name.");
-				String authorChoice=sc.nextLine();
-				ArrayList<Book> bookAuth = BookDB.getAuthor(authorChoice);
+			
+			}if(search==2){
+				//System.out.println("Enter an author's name.");
+				//String authorChoice=sc.nextLine();
+				ArrayList<Book> allAuthors = BookDB.getAuthor(choice);
 
-				for (Book m : bookAuth) {
-					System.out.println(m.getnewbooknum() + m.getTitle());
-					//System.out.println(m.getnewbooknum() + m.getAuthor());
+				for (Book m : allAuthors)  {
+					System.out.println(m.toString1());
 				}
-			}
+				
+				//{
+				//	System.out.println(m.getnewbooknum() + m.getTitle());
+					//System.out.println(m.getnewbooknum() + m.getAuthor());
+				//}
+			}else
+				
+				
 			
 			
 			// add println to enter a book number 1-12
@@ -79,10 +91,19 @@ public class BookListApp {
 			
 			// clearing out scan 
 			sc.nextLine();
-
+			
+			// continue statement input validation block
 			choice = Console.getChoice("Continue? (y/n): ", "y", "n");
 			System.out.println();
 		}
+		
+		Date currentDate = new Date ();
+		System.out.println("CURRENT DATE:" + currentDate);
+		GregorianCalendar calendar = new GregorianCalendar();
+		calendar.add(Calendar.DATE, 14);
+		System.out.println("DUE DATE:" +(calendar.getTime()));
+		
+		
 		
 		for (Book m : shoppingCart) {
 			System.out.println(m.toString());

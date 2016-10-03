@@ -23,7 +23,9 @@ public class Console {
 		String s = sc.nextLine();
 		return s;
 	}
-
+	
+// Stops blank entries for categories
+	
 	public static String getRequiredString(String prompt) {
 		String s = "";
 		while (true) {
@@ -37,7 +39,9 @@ public class Console {
 		}
 		return s;
 	}
-
+	
+	
+// continue statement input validation block
 	public static String getChoice(String prompt, String s1, String s2) {
 		String s = "";
 		while (true) {
@@ -50,7 +54,8 @@ public class Console {
 		}
 		return s;
 	}
-
+	
+// continue statement input validation block
 	public static String getChoice(String prompt, String s1, String s2, String s3) {
 		String s = "";
 		boolean isValid = false;
@@ -64,6 +69,8 @@ public class Console {
 		}
 		return s;
 	}
+	
+	
 
 	public static int getInt(String prompt) {
 		int i = 0;
